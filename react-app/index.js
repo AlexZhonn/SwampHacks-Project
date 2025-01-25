@@ -40,7 +40,7 @@ function createCloud() {
 
 // Function to create the cloud field
 function createCloudField() {
-  const cloudCount = 500; // You can adjust this based on how many clouds you want
+  const cloudCount = 100; // You can adjust this based on how many clouds you want
   const clouds = new THREE.Group();
   
   const loader = new THREE.TextureLoader();
@@ -59,11 +59,9 @@ function createCloudField() {
     const cloud = new THREE.Mesh(geometry, material);
 
     // Position the cloud randomly in space, and also give it some rotation for a more natural effect
-    //cloud.position.x = (i / cloudCount) * Math.cos(i / 2*Math.PI) * 550;
-    //cloud.position.y = (i / cloudCount) * Math.cos(i / 2*Math.PI) * 550;
-    cloud.position.x = (Math.random() - 0.5) * 550;
-    cloud.position.y = (Math.random() - 0.5) * 550;
-    cloud.position.z = (Math.random() - 0.5) * 400;
+    cloud.position.x = (Math.random() - 0.5) * 350;
+    cloud.position.y = (Math.random() - 0.5) * 350;
+    cloud.position.z = Math.random();
 
     cloud.rotation.z = 0;//Math.random() * Math.PI; // Random rotation
     cloud.rotation.x = 0;//Math.random() * Math.PI; // Random rotation
@@ -73,7 +71,7 @@ function createCloudField() {
   }
 
   // Position the cloud field above the sphere (adjust Z positioning)
-  clouds.position.z = 20; // Adjust so clouds appear in front of the sphere
+  clouds.position.z = -20; // Adjust so clouds appear in front of the sphere
 
   return clouds;
 }
@@ -89,6 +87,7 @@ const sphere = new THREE.Mesh(geometry, material);
 
 sphere.position.z = -20;
 sphere.rotation.y = 80;
+sphere.rotation.x = 0.3;
 
 const light = new THREE.AmbientLight(0x404040);
 scene.add(light);
@@ -110,7 +109,6 @@ function animate() {
 
   cloudField.rotation.z += 0.0005; // Rotate clouds slightly for movement effect
   sphere.rotation.y += 0.0015; // Slight rotation for the sphere
-  sphere.rotation.x += 0.0015; // Slight rotation for the sphere
 
   controls.update();
   renderer.render(scene, camera);
