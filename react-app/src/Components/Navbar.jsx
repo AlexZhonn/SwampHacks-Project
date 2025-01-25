@@ -6,23 +6,23 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-
+  const closeMobileMenu = () => setClick(false);
   return (
     <div className="header">
       {/* Logo */}
-      <Link to="/" className="logo-link"></Link>
+      <Link to="/" className="logo-link" onClick={closeMobileMenu}></Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={closeMobileMenu}>Home</Link>
         </li>
         <li>
-          <Link to="/project">Analyze</Link>
+          <Link to="/Anylyze" onClick={closeMobileMenu}>Analyze</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" onClick={closeMobileMenu}>About</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
         </li>
       </ul>
       <div className="hamburger" onClick={handleClick}>

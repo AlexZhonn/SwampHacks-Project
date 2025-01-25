@@ -8,14 +8,13 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-scene.background = new THREE.Color(0x000000);
+scene.background = new THREE.Color('rgb(101, 246, 99)');
 
 function createStarShape() {
   const starShape = new THREE.Shape();
   const outerRadius = 4;
   const innerRadius = 0.3;
   const angleStep = Math.PI / 5;
-
   starShape.moveTo(Math.cos(0) * outerRadius, Math.sin(0) * outerRadius);
 
   for (let i = 0; i < 5; i++) {

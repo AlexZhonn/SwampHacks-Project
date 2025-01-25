@@ -1,24 +1,21 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 
 function App() {
   const styles = {
-    background: "linear-gradient(to right, black, black)",
-    height: "100vh",
+    height: "300vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     color: "white",
+    zIndex: -2,
   };
 
   return (
     <>
       <Navbar />
       <div>
-        <h1>Vite + React</h1>
       </div>
     </>
   );
