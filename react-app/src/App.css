@@ -1,0 +1,7 @@
+.gradientStyle {
+  background: linear-gradient(to right, black, rgb(33, 33, 33));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
