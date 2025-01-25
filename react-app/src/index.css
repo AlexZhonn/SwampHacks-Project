@@ -29,6 +29,10 @@ body {
   }
 h1 {
   padding-top: 10%;
-    position: absolute;
-
+  position: absolute;
+}
+.FunFact {
+  font-size: 5vh;
+  padding-left: 1px;
+  padding-top: 45px;
 }
