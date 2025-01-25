@@ -6,8 +6,8 @@
     position: fixed;
     width: 100%;
     top: 0%;
-    left: 0;
-    z-index: -1; /* make sure it stays above other elements */
+    
+    z-index: 2; /* make sure it stays above other elements */
     background: #99eb62;
   }
   
@@ -42,10 +42,16 @@
   .close-menu-button{
     cursor: pointer;
     color : #ff0000;
+    opacity: 0;
   }
   .hamburger {
-    display: none;
+    display: none; /* Hide the hamburger on desktop */
     cursor: pointer;
+    color: #fff; /* Ensure hamburger is visible */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
   }
   
   @media screen and (max-width: 1040px) {
@@ -71,8 +77,15 @@
     .nav-menu li a {
       font-size: 2rem;
     }
+    .close-menu-button{
+      opacity: 1;
+    }
     .hamburger {
       display: block; /* Show the hamburger on mobile */
+        color: #fff; /* Ensure hamburger is visible */
+        position: relative;
+        right: 8vw;
+        top: 0;
     }
   }
   

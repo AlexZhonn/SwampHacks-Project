@@ -27,9 +27,8 @@ const Navbar = () => {
         <li>
           <Link to="/analyze" onClick={closeMobileMenu}>Analyze</Link>
         </li>
-        
       </ul>
-      </nav> 
+      </nav>
       <div className="hamburger" onClick={handleClick}>
         {click ? (
           <FaTimes size={20} style={{ color: "#fff" }} />
