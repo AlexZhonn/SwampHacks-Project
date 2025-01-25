@@ -1,4 +1,3 @@
-
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -8,13 +7,15 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-scene.background = new THREE.Color('rgb(101, 246, 99)');
+scene.background = new THREE.Color('rgb(207, 252, 255)');
 
-function createStarShape() {
+// Function to create a star shape
+function createCloudShape() {
   const starShape = new THREE.Shape();
   const outerRadius = 4;
   const innerRadius = 0.3;
   const angleStep = Math.PI / 5;
+
   starShape.moveTo(Math.cos(0) * outerRadius, Math.sin(0) * outerRadius);
 
   for (let i = 0; i < 5; i++) {
@@ -28,50 +29,72 @@ function createStarShape() {
   return geometry;
 }
 
-function createStar() {
-  const geometry = createStarShape();
+// Function to create a star
+function createCloud() {
+  const geometry = createCloudShape();
   const material = new THREE.MeshBasicMaterial({ color: 0xFFFFFF });
-  const star = new THREE.Mesh(geometry, material);
-  star.scale.set(0.3, 0.3, 0.3);
-  return star;
+  const cloud = new THREE.Mesh(geometry, material);
+  cloud.scale.set(0.3, 0.3, 0.3);
+  return cloud;
 }
 
-function createStarField() {
-  const starCount = 7000;
-  const stars = new THREE.Group();
+// Function to create the cloud field
+function createCloudField() {
+  const cloudCount = 500; // You can adjust this based on how many clouds you want
+  const clouds = new THREE.Group();
+  
+  const loader = new THREE.TextureLoader();
+  const cloudTexture = loader.load('./Cloud.png');  // Make sure to point to your cloud texture
 
-  for (let i = 0; i < starCount; i++) {
-    const star = createStar();
-    star.position.x = (Math.random() - 0.5) * 550;
-    star.position.y = (Math.random() - 0.5) * 550;
-    star.position.z = (Math.random() - 0.5) * 400;
+  for (let i = 0; i < cloudCount; i++) {
+    // Create a plane geometry for each cloud
+    const geometry = new THREE.PlaneGeometry(20, 20); // Adjust size to match your cloud texture
+    const material = new THREE.MeshBasicMaterial({
+      map: cloudTexture,
+      transparent: true, // To ensure transparency is respected
+      side: THREE.DoubleSide,
+      opacity: 0.7, // Adjust opacity for cloud density
+    });
 
-    stars.add(star);
+    const cloud = new THREE.Mesh(geometry, material);
+
+    // Position the cloud randomly in space, and also give it some rotation for a more natural effect
+    //cloud.position.x = (i / cloudCount) * Math.cos(i / 2*Math.PI) * 550;
+    //cloud.position.y = (i / cloudCount) * Math.cos(i / 2*Math.PI) * 550;
+    cloud.position.x = (Math.random() - 0.5) * 550;
+    cloud.position.y = (Math.random() - 0.5) * 550;
+    cloud.position.z = (Math.random() - 0.5) * 400;
+
+    cloud.rotation.z = 0;//Math.random() * Math.PI; // Random rotation
+    cloud.rotation.x = 0;//Math.random() * Math.PI; // Random rotation
+
+    // Add the cloud to the cloud group
+    clouds.add(cloud);
   }
 
-  return stars;
+  // Position the cloud field above the sphere (adjust Z positioning)
+  clouds.position.z = 20; // Adjust so clouds appear in front of the sphere
+
+  return clouds;
 }
 
-const starField = createStarField();
+// Set up the cloud field and Earth sphere
+const cloudField = createCloudField();
 
-const geometry = new THREE.SphereGeometry(10, 32, 32);
+const geometry = new THREE.SphereGeometry(14, 36, 36);
 const loader = new THREE.TextureLoader();
-const texture = loader.load('./image copy 2.png');
+const texture = loader.load('./earth.jpg');
 const material = new THREE.MeshBasicMaterial({ map: texture, color: 0xffffff , side: THREE.DoubleSide});
 const sphere = new THREE.Mesh(geometry, material);
-
 
 sphere.position.z = -20;
 sphere.rotation.y = 80;
 
-
-
 const light = new THREE.AmbientLight(0x404040);
-scene.add( light );
+scene.add(light);
 scene.add(sphere);
 
-
-scene.add(starField);
+scene.add(cloudField); // Add cloud field to scene
 
 camera.position.z = 60;
 
@@ -81,23 +104,24 @@ controls.enableRotate = false;
 controls.enablePan = false;
 controls.enableZoom = false;
 
+// Animation loop
 function animate() {
   requestAnimationFrame(animate);
 
+  cloudField.rotation.z += 0.0005; // Rotate clouds slightly for movement effect
+  sphere.rotation.y += 0.0015; // Slight rotation for the sphere
+  sphere.rotation.x += 0.0015; // Slight rotation for the sphere
 
-  starField.rotation.z += 0.0005;
-  sphere.rotation.y += 0.0005;
-  sphere.rotation.x += 0.0005;
   controls.update();
   renderer.render(scene, camera);
 }
 
 animate();
 
+// Handle window resizing
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
-
 
