@@ -8,7 +8,7 @@
     top: 0%;
     left: 0;
     z-index: -1; /* make sure it stays above other elements */
-    background: #43a850;
+    background: #99eb62;
   }
   
   /* Logo styling */
@@ -30,6 +30,7 @@
   
   .nav-menu li {
     padding: 0 1rem;
+    list-style-type: none;
   }
   
   .nav-menu li a {
