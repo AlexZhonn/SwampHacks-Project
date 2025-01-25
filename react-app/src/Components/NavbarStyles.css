@@ -5,10 +5,10 @@
     padding: 1rem;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 0%;
     left: 0;
     z-index: 999; /* make sure it stays above other elements */
-    background: #000000;
+    background: #43a850;
   }
   
   /* Logo styling */
@@ -38,7 +38,10 @@
     color: #fff;
     text-decoration: none;
   }
-  
+  .close-menu-button{
+    cursor: pointer;
+    color : #ff0000;
+  }
   .hamburger {
     display: none;
     cursor: pointer;

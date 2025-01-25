@@ -1,24 +1,26 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Analyze from "./components/Analyze";
+import Contact from "./components/Contact";
+import { Routes, Route } from "react-router-dom";
+
+
 
 function App() {
-  const styles = {
-    height: "300vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    color: "white",
-    zIndex: -2,
-  };
 
   return (
-    <>
-      <Navbar />
-      <div>
-      </div>
-    </>
-  );
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/analyze" element={<Analyze />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+    
+  )
 }
 
 export default App;
