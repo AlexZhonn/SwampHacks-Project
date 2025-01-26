@@ -6,8 +6,8 @@
     position: fixed;
     width: 100%;
     top: 0%;
-    
-    z-index: 2; /* make sure it stays above other elements */
+    left: 0;
+    z-index: 1000; /* make sure it stays above other elements */
     background: #99eb62;
   }
   

@@ -17,6 +17,7 @@ canvas {
 body {
     position: relative;
     display: flex;
+    height: 200vh;
   }
   body::-webkit-scrollbar {
     width: 0.25rem;
@@ -33,14 +34,32 @@ h1 {
 }
 .FunFact {
   font-size: 5vh;
-  padding-left: 1px;
-  padding-top: 45px;
+  padding-left: 2vh;
+  padding-top: 8vh;
 }
 
-.Analyse-Space {
+.block {
+  width: 92vw;
+  margin-top: 90vh;
+  margin-left: 5vh;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  place-items: center;
+  padding-top: 3vh;
+  margin-bottom: 0;
   font-size: 5vh;
-  height: 100vh;
-  width: 100%;
 }
 
+.blockText {
+  font-size: 3vh;
+  padding-top: 4vh;
+  padding-bottom: 3vh;
+}
 
+.img {
+  display: block;
+  width: 50vw;
+  padding-right: 3vw;
+  padding-left: 21vw;
+}
