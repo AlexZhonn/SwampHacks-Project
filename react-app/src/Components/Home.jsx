@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import CloudScene from './ThreeScene';
 import LoadingSpinner from './LoadingSpinner';
+import FunFact from './FunFacts';
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ const Home = () => {
         <CloudScene />
         <div className="home">
             <h1 className="FunFact"> 
-                Fun Fact: 
+                Fun Fact: { <FunFact />}
             </h1>
         </div>
         <div className="block">

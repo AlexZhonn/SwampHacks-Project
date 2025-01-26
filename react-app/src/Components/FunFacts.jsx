@@ -12,8 +12,7 @@ const FunFact = () => {
 
     return (
         <div className="fun-fact">
-            <h2>Fun Fact</h2>
-            <p>{funFact}</p>
+            <p font-size="12px">{funFact}</p>
         </div>
     );
 };
