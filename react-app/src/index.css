@@ -42,9 +42,9 @@ h1 {
 }
 
 .block {
-  width: 92vw;
-  margin-top: 80vh;
-  margin-left: 5vh;
+  width: 94vw;
+  margin-top: 90vh;
+  margin-left: 3vw;
   background-color: white;
   border-radius: 20px;
   text-align: center;
@@ -70,6 +70,7 @@ h1 {
 .fun-fact-container {
   display: flex;                /* Make the container a flexbox */
   gap: 10px;                    /* Add some space between the elements */
+  display: block;
 }
 
 .fun-fact {
@@ -82,4 +83,7 @@ h1 {
   word-wrap: break-word;        /* Ensure the text wraps within the max-width */
   overflow-wrap: break-word;    /* Support legacy browsers for wrapping */
   margin: 0;                    /* Remove default margin */
+  display: block;
+    max-width: 95vw;
+    font-size: 8vw;
 }

@@ -24,7 +24,7 @@ const FunFact = () => {
                 }
             });
             index++;
-        }, 100); // 100ms interval between each character
+        }, 50); // 100ms interval between each character
 
         // Cleanup interval when the component is unmounted or when the effect is finished
         return () => clearInterval(typingEffect);

@@ -36,8 +36,8 @@
   .nav-menu li a {
     position: relative; 
     text-decoration: none; 
-    font-size: 18px; 
-    color: black;
+    font-size: 0px;
+    color: white;
     font-weight: 800;
   }
   
@@ -71,6 +71,7 @@
     top: 1rem;
     right: 1rem;
     font-size: 2rem;
+    scale: 200%;
   }
   
   @media screen and (max-width: 1040px) {
@@ -94,7 +95,7 @@
       padding: 1rem 0;
     }
     .nav-menu li a {
-      font-size: 2rem;
+      font-size: 10vw;
     }
     .close-menu-button{
       opacity: 1;
