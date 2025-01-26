@@ -18,7 +18,7 @@ const Navbar = () => {
       <ul className={click ? "nav-menu active" : "nav-menu"}>
       <li>
           <a onClick={closeMobileMenu} className="close-menu-button">
-            close
+            Close
           </a>
         </li>
         <li>
