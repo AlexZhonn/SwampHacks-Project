@@ -6,11 +6,11 @@ const Design = () => {
         <div className='Welcome-Design-container'>
             <div></div>
         <div className='Welcome-Design'>
-            <h1 className="title">Welcome to SwampHacks Project</h1>
-            <p>Designed by Alex Zhong, Lucas Romero, Pablo Pupo, Lucas Brown</p>
+            <h1 className="introductionProject">Welcome to Our SwampHacks X Project!</h1>
+            <p>Designed by Alex Zhong, Lucas Romero, Pablo Pupo, Logan Brown</p>
         </div>
         </div>
-        <img className="GP" src="../GP.png"/>
+        <img className="sticknote" src="../sticknote.jpg"/>
         </>
     );
 };

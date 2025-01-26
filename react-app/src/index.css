@@ -28,7 +28,6 @@ body {
   }
   body::-webkit-scrollbar-thumb {
     background: #99eb62;
- 
   }
 
 
@@ -46,6 +45,7 @@ body {
   text-align: center;
   place-items: center;
   padding-top: 3vh;
+  font-weight: 800;
   margin-bottom: 5vh;
   font-size: 5vh;
   
@@ -75,22 +75,21 @@ body {
 }
 
 .random-fact {
-  max-width: 25%;             /* Set a maximum width for the fun fact text */
   word-wrap: break-word;        /* Ensure the text wraps within the max-width */
   overflow-wrap: break-word;    /* Support legacy browsers for wrapping */
   margin: 0;                    /* Remove default margin */
   display: block;
-    max-width: 25vw;
+    max-width: 35vw;
     font-size: 3vw;
 }
 
 .Welcome-Design-container {
   z-index: 10;
-  width: 75%;
+  width: 90%;
   display: flex;
   position: absolute; /* Ensure the container is positioned relatively */
-  top: 40%;
-  right:2%;
+  top: 37%;
+  right:4%;
 }
 
 .Welcome-Design {
@@ -112,12 +111,19 @@ body {
   right:0%;
 }
 
+.introductionProject {
+  text-align: center;
+  padding-bottom: 5vh;
+  font-size: 38px;
+}
 
-.GP{
+.sticknote{
   object-fit: contain;
-  width: 30vw;
-  top:33%;
+  width: 34vw;
+  height: 16%;
+  top: 34%;
   right:0%;
   position: absolute;
+  border-radius: 7px;
 }
 /* Add more styles as needed */

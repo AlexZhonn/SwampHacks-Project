@@ -32,7 +32,7 @@ const FunFact = () => {
 
     return (
         <div className="fun-fact-container">
-            <p className="fun-fact">Fun fact:</p>
+            <p className="fun-fact">Fun Fact:</p>
             <p className="random-fact">{displayedFact}</p>
         </div>
     );
