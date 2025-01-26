@@ -1,0 +1,110 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    z-index: 1000; /* make sure it stays above other elements */
+    background: #99eb62;
+  }
+  
+  /* Logo styling */
+  .nav-logo {
+    width: 150px; /* adjust as needed */
+    height: auto;
+  }
+  
+  .logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-menu {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  .nav-menu li {
+    padding: 0 1rem;
+    list-style-type: none;
+  }
+  
+  .nav-menu li a {
+    position: relative; 
+    text-decoration: none; 
+    font-size: 18px;
+    color: black;
+    font-weight: 800;
+  }
+  
+  .nav-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 0;
+    height: 2px;
+    background-color: rgb(207, 252, 255);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-menu li a:hover::after {
+    width: 100%; 
+    left: 0;
+  }
+  
+
+  .close-menu-button{
+    cursor: pointer;
+    color : #ff0000;
+    opacity: 0;
+  }
+  .hamburger {
+    display: none; /* Hide the hamburger on desktop */
+    cursor: pointer;
+    color: #fff; /* Ensure hamburger is visible */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    scale: 200%;
+  }
+  
+  @media screen and (max-width: 1040px) {
+    .nav-menu {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background: rgba(253, 253, 253, 0.9);
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 998;
+      transition: 0.5s;
+    }
+    .nav-menu.active {
+      left: 0;
+    }
+    .nav-menu li {
+      padding: 1rem 0;
+    }
+    .nav-menu li a {
+      font-size: 5vw;
+    }
+    .close-menu-button{
+      opacity: 1;
+    }
+    .hamburger {
+      display: block; /* Show the hamburger on mobile */
+        color: #fff; /* Ensure hamburger is visible */
+        position: relative;
+        right: 8vw;
+        top: 0;
+    }
+  }

@@ -25,7 +25,6 @@ const Home = () => {
             <p className="FunFact"> 
                 { <FunFact />}
             </p>
-            <Design />
         </div>
         <div className="block">
              Welcome to the Website!
