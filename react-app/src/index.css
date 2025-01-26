@@ -20,14 +20,16 @@ body {
     height: 200vh;
   }
   body::-webkit-scrollbar {
-    width: 0.25rem;
+    scrollbar-width: auto;
   }
   body::-webkit-scrollbar-track {
-    background: #020202;
+    background: rgb(207, 252, 255);
   }
   body::-webkit-scrollbar-thumb {
     background: #65ff50;
+ 
   }
+
 h1 {
   padding-top: 10%;
   position: absolute;
