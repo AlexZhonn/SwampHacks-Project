@@ -7,7 +7,7 @@
     width: 100%;
     top: 0%;
     left: 0;
-    z-index: -1; /* make sure it stays above other elements */
+    z-index: 1000; /* make sure it stays above other elements */
     background: #99eb62;
   }
   
