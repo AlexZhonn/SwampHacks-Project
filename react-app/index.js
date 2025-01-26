@@ -79,7 +79,7 @@ function createCloudField() {
 // Set up the cloud field and Earth sphere
 const cloudField = createCloudField();
 
-const geometry = new THREE.SphereGeometry(14, 36, 36);
+const geometry = new THREE.SphereGeometry(18, 40, 40);
 const loader = new THREE.TextureLoader();
 const texture = loader.load('./earth.jpg');
 const material = new THREE.MeshBasicMaterial({ map: texture, color: 0xffffff , side: THREE.DoubleSide});

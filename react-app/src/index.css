@@ -26,7 +26,7 @@ body {
     background: rgb(207, 252, 255);
   }
   body::-webkit-scrollbar-thumb {
-    background: #65ff50;
+    background: #99eb62;
  
   }
 
@@ -64,4 +64,21 @@ h1 {
   width: 50vw;
   padding-right: 3vw;
   padding-left: 21vw;
+}
+
+.fun-fact-container {
+  display: flex;                /* Make the container a flexbox */
+  gap: 10px;                    /* Add some space between the elements */
+}
+
+.fun-fact {
+  font-weight: bold;
+  margin: 0;                    /* Remove default margin */
+}
+
+.random-fact {
+  max-width: 25vw;             /* Set a maximum width for the fun fact text */
+  word-wrap: break-word;        /* Ensure the text wraps within the max-width */
+  overflow-wrap: break-word;    /* Support legacy browsers for wrapping */
+  margin: 0;                    /* Remove default margin */
 }

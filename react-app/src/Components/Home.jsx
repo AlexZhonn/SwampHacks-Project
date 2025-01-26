@@ -23,9 +23,9 @@ const Home = () => {
         <Navbar />
         <CloudScene />
         <div className="home">
-            <h1 className="FunFact"> 
-                Fun Fact: { <FunFact />}
-            </h1>
+            <p className="FunFact"> 
+                { <FunFact />}
+            </p>
         </div>
         <div className="block">
              Welcome to the Website!
