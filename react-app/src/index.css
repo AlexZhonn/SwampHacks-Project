@@ -75,11 +75,7 @@ body {
 }
 
 .random-fact {
-<<<<<<< HEAD
   max-width: 25%;             /* Set a maximum width for the fun fact text */
-=======
-  max-width: 25vw;             /* Set a maximum width for the fun fact text */
->>>>>>> 94412c38d3dfb1bea22c96aabb03255b79bfcbdb
   word-wrap: break-word;        /* Ensure the text wraps within the max-width */
   overflow-wrap: break-word;    /* Support legacy browsers for wrapping */
   margin: 0;                    /* Remove default margin */
@@ -87,7 +83,6 @@ body {
     max-width: 25vw;
     font-size: 3vw;
 }
-<<<<<<< HEAD
 
 .Welcome-Design-container {
   z-index: 10;
@@ -126,5 +121,3 @@ body {
   position: absolute;
 }
 /* Add more styles as needed */
-=======
->>>>>>> 94412c38d3dfb1bea22c96aabb03255b79bfcbdb
