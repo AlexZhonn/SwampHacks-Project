@@ -18,6 +18,7 @@ body {
     position: relative;
     display: flex;
     height: 200vh;
+    font-family: 'Sour Gummy', serif;
   }
   body::-webkit-scrollbar {
     scrollbar-width: auto;
@@ -42,14 +43,14 @@ h1 {
 
 .block {
   width: 92vw;
-  margin-top: 90vh;
+  margin-top: 80vh;
   margin-left: 5vh;
   background-color: white;
   border-radius: 20px;
   text-align: center;
   place-items: center;
   padding-top: 3vh;
-  margin-bottom: 0;
+  margin-bottom: 5vh;
   font-size: 5vh;
 }
 
