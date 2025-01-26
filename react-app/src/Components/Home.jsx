@@ -16,7 +16,9 @@ const Home = () => {
     }, []);
 
     return (
+        
         <>
+        {loading && <LoadingSpinner/>}
         <Navbar />
         <CloudScene />
         <div className="home">
