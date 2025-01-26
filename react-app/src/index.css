@@ -18,6 +18,7 @@ body {
     position: relative;
     display: flex;
     height: 200vh;
+    font-family: 'Sour Gummy', serif;
   }
   body::-webkit-scrollbar {
     scrollbar-width: auto;
@@ -26,31 +27,28 @@ body {
     background: rgb(207, 252, 255);
   }
   body::-webkit-scrollbar-thumb {
-    background: #65ff50;
+    background: #99eb62;
  
   }
 
-h1 {
-  padding-top: 10%;
-  position: absolute;
-}
+
 .FunFact {
   font-size: 5vh;
   padding-left: 2vh;
-  padding-top: 8vh;
 }
 
 .block {
   width: 92vw;
-  margin-top: 90vh;
+  margin-top: 80vh;
   margin-left: 5vh;
   background-color: white;
   border-radius: 20px;
   text-align: center;
   place-items: center;
   padding-top: 3vh;
-  margin-bottom: 0;
+  margin-bottom: 5vh;
   font-size: 5vh;
+  
 }
 
 .blockText {
@@ -65,3 +63,61 @@ h1 {
   padding-right: 3vw;
   padding-left: 21vw;
 }
+
+.fun-fact-container {
+  display: flex;                /* Make the container a flexbox */
+  gap: 10px;                    /* Add some space between the elements */
+}
+
+.fun-fact {
+  font-weight: bold;
+  margin: 0;                    /* Remove default margin */
+}
+
+.random-fact {
+  max-width: 25%;             /* Set a maximum width for the fun fact text */
+  word-wrap: break-word;        /* Ensure the text wraps within the max-width */
+  overflow-wrap: break-word;    /* Support legacy browsers for wrapping */
+  margin: 0;                    /* Remove default margin */
+  display: block;
+    max-width: 25vw;
+    font-size: 3vw;
+}
+
+.Welcome-Design-container {
+  z-index: 10;
+  width: 75%;
+  display: flex;
+  position: absolute; /* Ensure the container is positioned relatively */
+  top: 40%;
+  right:2%;
+}
+
+.Welcome-Design {
+  width: 30%;
+  position: absolute; /* Position the element absolutely within its parent */
+  right: 0%; /* Align the element to the right side */
+  margin: 0; /* Remove default margin */
+  top: 110%;
+}
+
+.fun-fact-container{
+  left: 0;
+  width: 50%;
+}
+.home{
+  display: flex;
+}
+.title{
+  right:0%;
+}
+
+
+.GP{
+  object-fit: contain;
+  width: 30vw;
+  top:33%;
+  right:0%;
+  position: absolute;
+}
+/* Add more styles as needed */

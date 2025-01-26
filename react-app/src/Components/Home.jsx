@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar';
 import CloudScene from './ThreeScene';
 import LoadingSpinner from './LoadingSpinner';
 import FunFact from './FunFacts';
+import Design from './Design';
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -20,18 +20,18 @@ const Home = () => {
         
         <>
         {loading && <LoadingSpinner/>}
-        <Navbar />
         <CloudScene />
         <div className="home">
-            <h1 className="FunFact"> 
-                Fun Fact: { <FunFact />}
-            </h1>
+            <p className="FunFact"> 
+                { <FunFact />}
+            </p>
+            <Design />
         </div>
         <div className="block">
              Welcome to the Website!
             <div className="blockText">
                 <img className="img" src="../recycling.jpg"  align="center"/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Snap a photo of your trash and upload it here to discover its recycling potential! Not just anything belongs in the recycling bin, but don't toss it all in the trash if you're unsure where it should go! With a simple snap and a click, you can help reduce waste in landfills, conserve energy, and minimize pollution. Each recycled item is a small yet mighty step towards a brighter, healthier world!
             </div>
         </div> 
         </>
