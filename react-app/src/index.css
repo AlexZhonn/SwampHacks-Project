@@ -17,7 +17,7 @@ canvas {
 body {
     position: relative;
     display: flex;
-    height: 200vh;
+    height: 275vh;
     font-family: 'Sour Gummy', serif;
   }
   body::-webkit-scrollbar {
@@ -32,13 +32,14 @@ body {
 
 
 .FunFact {
+  display: flex;
   font-size: 5vh;
-  padding-left: 2vh;
+  text-align: right;
 }
 
 .block {
   width: 92vw;
-  margin-top: 80vh;
+  margin-top: 100vh;
   margin-left: 5vh;
   background-color: white;
   border-radius: 20px;
@@ -47,8 +48,14 @@ body {
   padding-top: 3vh;
   font-weight: 800;
   margin-bottom: 5vh;
-  font-size: 5vh;
+  font-size: 10vh;
+  height: 155vh;
+  position: relative;
   
+}
+
+.imageUpload {
+  font-size: 10vh;
 }
 
 .blockText {
@@ -64,14 +71,13 @@ body {
   padding-left: 21vw;
 }
 
-.fun-fact-container {
-  display: flex;                /* Make the container a flexbox */
-  gap: 10px;                    /* Add some space between the elements */
-}
 
 .fun-fact {
+  width: 20%;
   font-weight: bold;
-  margin: 0;                    /* Remove default margin */
+  margin: 0;
+  font-size:3vw; 
+  text-align: right;
 }
 
 .random-fact {
@@ -79,25 +85,26 @@ body {
   overflow-wrap: break-word;    /* Support legacy browsers for wrapping */
   margin: 0;                    /* Remove default margin */
   display: block;
-    max-width: 35vw;
+    text-align: left;
+    width: 60vh;
     font-size: 3vw;
+    margin-left: 2vw;
 }
 
 .Welcome-Design-container {
   z-index: 10;
-  width: 90%;
+  width: 40%;
   display: flex;
   position: absolute; /* Ensure the container is positioned relatively */
-  top: 37%;
-  right:4%;
+  top: 20%;
+  right:3%;
 }
 
 .Welcome-Design {
-  width: 30%;
+  width: 60%;
   position: absolute; /* Position the element absolutely within its parent */
-  right: 0%; /* Align the element to the right side */
+  right: 5%; /* Align the element to the right side */
   margin: 0; /* Remove default margin */
-  top: 110%;
 }
 
 .fun-fact-container{
@@ -109,21 +116,103 @@ body {
 }
 .title{
   right:0%;
+  font-size:3vh;
 }
 
 .introductionProject {
   text-align: center;
-  padding-bottom: 5vh;
-  font-size: 38px;
+  font-size: 2vw;
 }
-
+.name{
+  font-size: 1.75vw;
+  padding-top: 12px;
+}
 .sticknote{
   object-fit: contain;
   width: 34vw;
-  height: 16%;
-  top: 34%;
+  height: 40vh;
+  top: 17%;
   right:0%;
   position: absolute;
   border-radius: 7px;
 }
-/* Add more styles as needed */
+
+.classify {
+  border-radius: 8px;
+  font-size: 3vh;
+  padding: 1vh;
+}
+
+.upload {
+  border-radius: 8px;
+  font-size: 3vh;
+  padding: 0.25vh;
+}
+
+.statement{
+  font-size: 6vh;
+  padding: 1vh;
+  font-weight: 500;
+}
+
+.prediction {
+  font-size: 7vh;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
+
+
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button:hover {
+  background: #ffe9e9;
+  transform: translate(0, 0.25em);
+}
+
+button:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button:active {
+  background: #ffe9e9;
+  transform: translate(0em, 0.75em);
+}
+
+button:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
