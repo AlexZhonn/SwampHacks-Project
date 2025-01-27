@@ -12,8 +12,8 @@
 }
 
 .loading-spinner {
-    width: 120px; /* Adjust size as needed */
-    height: 120px; /* Adjust size as needed */
+    width: 10vw; /* Adjust size as needed */
+    height: 10vw; /* Adjust size as needed */
     animation: spin 2s linear infinite; /* Add spinning animation */
 }
 

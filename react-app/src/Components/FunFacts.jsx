@@ -31,10 +31,9 @@ const FunFact = () => {
     }, []);
 
     return (
-        <div className="fun-fact-container">
-            <p className="fun-fact">Fun Fact:</p>
-            <p className="random-fact">{displayedFact}</p>
-        </div>
+        
+            
+                <p className="random-fact">{displayedFact}</p>
     );
 };
 
