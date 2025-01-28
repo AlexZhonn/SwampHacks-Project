@@ -8,7 +8,7 @@ Download the backends via URL: https://drive.google.com/drive/folders/1u5eaWD1iQ
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/AlexZhonn/SwampHacks-Project.git
 ```
 Install dependencies
 
