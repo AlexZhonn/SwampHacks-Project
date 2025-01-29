@@ -1,8 +1,32 @@
-# React + Vite
+# AI-Driven Recycle Decision Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Download the backends via URL: https://drive.google.com/drive/folders/1u5eaWD1iQBcvD16q3jWvIWOm_6QUtqRI?usp=sharing
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/AlexZhonn/SwampHacks-Project.git
+```
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  cd myproject/api
+  source myenv/bin/activate
+  cd ..
+  python manage.py runserver
+```
+
+Open the Web Page
+
+```bash
+  npm run dev
+```
